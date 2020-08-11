@@ -1,38 +1,180 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  --primary-app-color: #10C9F8;
+  --font-color: #151426;
+}
+
+.app {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.form-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: auto;
+  padding: 1.5em;
+  border-radius: 10px;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.2), -4px -4px 5px rgba(0, 0, 0, 0.2);
+}
+
+.form-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.form-inner .form-input {
+  margin-bottom: 1em;
+  width: 60%;
+  position: relative;
+}
+
+.form-inner .form-label
+{
+  margin-top: -3em;
+  box-shadow: 0 5px 11px rgba(0,0,0,0.18);
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  border-radius: 10px;
+  width: 100%;
+  padding: 1em;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.4em;
+  color: var(--primary-app-color);
+  background: var(--font-color);
+}
+
+.form-inner .form-input .input-control {
+  padding: 0.6em 1.5em 0.8em 3em;
+  width: 100%;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid rgba(0,0,0, 0.3);
+  box-shadow: none;
+  transition: border-bottom 0.2s ease-in;
+}
+
+.form-inner .form-input .input-control:focus{
+  border-bottom: 2px solid var(--primary-app-color);
+}
+
+.form-inner .form-input label {
+  position: absolute;
+  left: 1em;
+  top: 0.6em;
+}
+
+.submit-button button {
+  padding: 0.6em 1.2em;
+  border-radius: 5px;
+  background: var(--primary-app-color);
+  border: none;
+  color: white;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.submit-button button:hover {
+  transform: scale(1.1);
+}
+
+.form-input .input-control.input-error
+{
+  border: 1px solid rgba(248, 72, 72, 0.849);
+}
+
+.form-input .input-error-text
+{
+  color: rgba(248, 72, 72, 0.849);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.content-page {
+  width: 100%;
+  height: 100%;
+  padding: 4em 2em;
+}
+
+.content-page .details {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-details {
+  height: 100%;
+  width: 30%;
+  border-radius: 10px;
+  padding: 1.5em 1em;
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2), -5px -5px 7px rgba(0, 0, 0, 0.2);
+  color: var(--primary-app-color);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.user-details >h2 {
+  font-size: 1.2em;
+  margin-top: 1em;
+  font-weight: bold;
+}
+
+.user-details >div{
+  margin-top: 1.3em;
+}
+
+.user-details .user-details-inner {
+  padding: 0.5em 1.2em;
+  width: 100%;
+}
+
+.user-details .user-details-inner >div {
+  margin-top: 1em;
+}
+
+.user-details .user-details-inner >div h3 {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--font-color);
+}
+
+.charts-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3em;
+}
+
+.custom-legends {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.chart-list-legend {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  align-items: center;
 }
