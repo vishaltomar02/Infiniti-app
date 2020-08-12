@@ -21,16 +21,18 @@ const hideLoader = () => {
 }
 
 const fetchUsersSuccessful = (data) => {
-  console.log(data);
   return {
-    type: 'OTHER_USERS',
-    data: data
+    type: 'OTHER_USERS_SUCCESSFUL',
+    data: [...data]
   }
 
 }
 
 const fetchUsersFailed = (error) => {
-  console.log(error);
+  return {
+    type: 'OTHER_USERS_FAILED',
+    data: error
+  }
 }
 
 export const fetchUsers = () => {

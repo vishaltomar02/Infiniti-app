@@ -7,12 +7,11 @@ import './App.css';
 const initialValues = { name: '', email: '', password: '', city: '' };
 
 function SignUpPage(props) {
-  const { addUser, fetchUsers, history } = props;
+  const { addUser, history } = props;
 
   const signUp = (values) => {
     addUser(values);
     history.push({pathname: 'content-page'});
-    fetchUsers();
   }
 
   const {
@@ -111,8 +110,7 @@ function SignUpPage(props) {
 
 const mapDispatchToProps = dispatch => {
   return {
-    addUser: (user) => dispatch(actions.addUserAction(user)),
-    fetchUsers: () => dispatch(actions.fetchUsers())
+    addUser: (user) => dispatch(actions.addUserAction(user))
   }
 }
 

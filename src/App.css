@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'QuickSand', sans-serif;
   --primary-app-color: #10C9F8;
   --font-color: #151426;
 }
@@ -177,4 +177,30 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.users-container {
+  width: 100%;
+  height: auto;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-card {
+  padding: 1em;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1), -2px 0 2px rgba(0, 0, 0, 0.1);
+  color: #82949d;
+  width: 40%;
+  margin-bottom: 50px;
+}
+
+.user-card >div {
+  display: flex;
+  align-items: center;
+}
+.user-card >div >span {
+  margin: 10px 30px 10px 15px;
 }

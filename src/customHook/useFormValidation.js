@@ -16,6 +16,7 @@ export default function useFormValidation(signUp, initialValues) {
       }
       else setFormSubmitting(false);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [errors]);
 
   function handleValuesChange(e) {

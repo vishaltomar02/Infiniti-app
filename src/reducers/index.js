@@ -26,6 +26,18 @@ const loaderReducer = (state = false, action) => {
   }
 }
 
-const rootReducer = combineReducers({addUser, loaderReducer});
+const otherUsers = (state = false, action) => {
+  switch(action.type)
+  {
+    case 'OTHER_USERS_SUCCESSFUL':
+      return Object.assign({}, state, {users: action.data});
+    case 'OTHER_USERS_FAILED':
+      return Object.assign({}, state, {usersError: action.data});
+    default: return state;
+  }
+}
+
+
+const rootReducer = combineReducers({addUser, loaderReducer, otherUsers});
 
 export default rootReducer;

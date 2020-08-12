@@ -78,7 +78,7 @@ class CombinationCharts extends React.PureComponent {
             <Pie 
               data={chartsData}
               options={chartOptions}
-              height='230'/> :
+              height={230}/> :
             <Bar ref={el => { this.chart = el; }} width={dimensions && dimensions.width} height={dimensions && dimensions.height} data={chartsData} options={chartOptions} />
         }
       </div>
